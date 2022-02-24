@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,15 +15,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'SIGN UP PAGE'),
@@ -35,14 +25,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
 
   final String title;
 
@@ -51,93 +33,77 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // int _counter = 0;
-
-  // void _incrementCounter() {
-  //   setState(() {
-  //     // This call to setState tells the Flutter framework that something has
-  //     // changed in this State, which causes it to rerun the build method below
-  //     // so that the display can reflect the updated values. If we changed
-  //     // _counter without calling setState(), then the build method would not be
-  //     // called again, and so nothing would appear to happen.
-  //     _counter++;
-  //   });
-  // }
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+
     return Scaffold(
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              "Healthcare whenever \n"
-              "you need it",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-              // Theme.of(context).textTheme.headline4,
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: RadialGradient(
+              radius: 0.8,
+              colors: [Colors.teal.shade200,Colors.white],
+              focalRadius: 10.0,
+            ),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+               Image.asset('assets/images/boy.jpg',
+               width: 250,
+                 height: 250,
+                 color: Colors.teal.shade100,
+                 colorBlendMode: BlendMode.darken,
+               ),
+              // SizedBox(
+              //   height: 250,
+              // ),
+              Text(
+                "Healthcare whenever \n"
+                "you need it",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+                // Theme.of(context).textTheme.headline4,
 
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 17,
-            ),
-            Text(
-              "We value your privacy & safety. \n"
-              "Read our Privacy Policy",
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            SizedBox(
-              height: 60,
-              width: 300,
-            child: OutlineButton(
-              child: Text(
-                "sign up",
-                style: TextStyle(fontSize: 20.0),
+                textAlign: TextAlign.center,
               ),
-              highlightedBorderColor: Colors.cyanAccent,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(35)),
-              onPressed: () {},
-            ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            SizedBox(
-              height: 60,
-              width: 300,
+              SizedBox(
+                height: 25,
+              ),
+              // Text(
+              //   "We value your privacy & safety. \n"
+              //   "Read our Privacy Policy",
+              //   textAlign: TextAlign.center,
+              // ),
+              Center(
+                child: Text.rich(
+                  TextSpan(
+                    text: 'We value your privacy & safety.\n '
+                                'Read our ',
+                    style: TextStyle(),
+                    children: <TextSpan>[
+                      TextSpan(
+                          text: 'Privacy Policy',
+                          style: TextStyle(
+                            color: Colors.blue.shade900,
+                            decoration: TextDecoration.underline,
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              SizedBox(
+                height: 60,
+                width: 300,
               child: OutlineButton(
                 child: Text(
-                  "Have an account? Login",
+                  "sign up",
                   style: TextStyle(fontSize: 20.0),
                 ),
                 highlightedBorderColor: Colors.cyanAccent,
@@ -145,8 +111,26 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: BorderRadius.circular(35)),
                 onPressed: () {},
               ),
-            ),
-          ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                height: 60,
+                width: 300,
+                child: OutlineButton(
+                  child: Text(
+                    "Have an account? Login",
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                  highlightedBorderColor: Colors.cyanAccent,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(35)),
+                  onPressed: () {},
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       // floatingActionButton: FloatingActionButton(
