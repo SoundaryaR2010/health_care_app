@@ -38,24 +38,24 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      body: Center(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: RadialGradient(
-              radius: 0.8,
-              colors: [Colors.teal.shade200,Colors.white],
-              focalRadius: 10.0,
-            ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: RadialGradient(
+            radius: 0.8,
+            colors: [Colors.teal.shade200,Colors.white],
           ),
+        ),
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-               Image.asset('assets/images/boy.jpg',
-               width: 250,
-                 height: 250,
-                 color: Colors.teal.shade100,
-                 colorBlendMode: BlendMode.darken,
-               ),
+
+               // Image.asset('assets/images/boy.jpg',
+               // width: 250,
+               //   height: 250,
+               //   color: Colors.teal.shade100,
+               //   colorBlendMode: BlendMode.darken,
+               // ),
               // SizedBox(
               //   height: 250,
               // ),
@@ -99,35 +99,41 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 30,
               ),
               SizedBox(
-                height: 60,
-                width: 300,
-              child: OutlineButton(
+                height: 50,
+                width: 270,
+              child: OutlinedButton(
                 child: Text(
                   "sign up",
-                  style: TextStyle(fontSize: 20.0),
+                  style: TextStyle(fontSize: 20.0,
+                    color: Colors.black54,
+                  ),
                 ),
-                highlightedBorderColor: Colors.cyanAccent,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(35)),
-                onPressed: () {},
-              ),
+                style: OutlinedButton.styleFrom(
+                  backgroundColor: Colors.teal.shade100,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                ),
+                onPressed:() {},
+              )
               ),
               SizedBox(
                 height: 20,
               ),
               SizedBox(
-                height: 60,
-                width: 300,
-                child: OutlineButton(
+                height: 50,
+                width: 270,
+                child: OutlinedButton(
                   child: Text(
-                    "Have an account? Login",
-                    style: TextStyle(fontSize: 20.0),
+                    "Have an account? login",
+                    style: TextStyle(fontSize: 20.0,
+                      color: Colors.black54,
+                    ),
                   ),
-                  highlightedBorderColor: Colors.cyanAccent,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(35)),
-                  onPressed: () {},
-                ),
+                  style: OutlinedButton.styleFrom(
+                    backgroundColor: Colors.teal.shade100,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                  ),
+                  onPressed:() {},
+                )
               ),
             ],
           ),
