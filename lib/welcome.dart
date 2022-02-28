@@ -47,6 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
                "Welcome\n"
                 "  screen",
                 style: TextStyle(
+                  height: 0.7,
                   fontSize: 27,
                   fontWeight: FontWeight.bold,
                 ),
@@ -54,15 +55,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 textAlign: TextAlign.start,
               ),
-              Text(
-                "Which services you want to\n "
-                    "take?",
-                style: TextStyle(
-                  fontSize: 21,
-                ),
-                // Theme.of(context).textTheme.headline4,
-                textAlign: TextAlign.start,
+              SizedBox(
+                height: 20,
               ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Which services you want to\n "
+                      "take?",
+                  style: TextStyle(
+                    fontSize: 21,
+                  ),
+                ),
+              ),
+             SizedBox(
+               height: 5,
+             ),
              SizedBox(
                width: MediaQuery.of(context).size.width,
                child: Container(
@@ -73,16 +81,20 @@ class _MyHomePageState extends State<MyHomePage> {
                    gradient: LinearGradient(
                      begin: Alignment.topLeft,
                      end: Alignment.bottomRight,
-                     colors: [Colors.pink.shade100, Colors.teal.shade100, Colors.pink.shade100],
+                     colors: [Colors.pink.shade50, Colors.teal.shade100, Colors.pink.shade100],
                    ),
                  ),
                  child: MaterialButton(
                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                    shape: StadiumBorder(),
-                   child: Text(
-                     'Heart health',
-                     textAlign: TextAlign.left,
-                     style: TextStyle(color: Colors.black54, fontSize: 20),
+                   child: Align(
+                     alignment: Alignment.topLeft,
+                      widthFactor: 2.5,
+                     child: Text(
+                       'Heart health',
+                       textAlign: TextAlign.left,
+                       style: TextStyle(color: Colors.black54, fontSize: 20),
+                     ),
                    ),
                    onPressed: () {},
                  ),
@@ -107,10 +119,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: MaterialButton(
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     shape: StadiumBorder(),
-                    child: Text(
-                      'Diabetes',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(color: Colors.black54, fontSize: 20),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      widthFactor: 3.6,
+                      child: Text(
+                        'Diabetes',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(color: Colors.black54, fontSize: 20),
+                      ),
                     ),
                     onPressed: () {},
                   ),
@@ -135,10 +151,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: MaterialButton(
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     shape: StadiumBorder(),
-                    child: Text(
-                      'Mental health',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(color: Colors.black54, fontSize: 20),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      widthFactor: 2.3,
+                      child: Text(
+                        'Mental health',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(color: Colors.black54, fontSize: 20),
+                      ),
                     ),
                     onPressed: () {},
                   ),
@@ -157,16 +177,19 @@ class _MyHomePageState extends State<MyHomePage> {
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [Colors.tealAccent.shade100, Colors.pink.shade100, Colors.pink.shade100],
+                      colors: [Colors.tealAccent.shade100, Colors.pink.shade50],
                     ),
                   ),
                   child: MaterialButton(
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     shape: StadiumBorder(),
-                    child: Text(
-                      'Fitness',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(color: Colors.black54, fontSize: 20),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      widthFactor: 5.0,
+                      child: Text(
+                        'Fitness',
+                        style: TextStyle(color: Colors.black54, fontSize: 20),
+                      ),
                     ),
                     onPressed: () {},
                   ),
@@ -185,16 +208,20 @@ class _MyHomePageState extends State<MyHomePage> {
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [Colors.pink.shade100, Colors.teal.shade100, Colors.pink.shade100],
+                      colors: [Colors.pink.shade50, Colors.teal.shade100, Colors.pink.shade50],
                     ),
                   ),
                   child: MaterialButton(
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     shape: StadiumBorder(),
-                    child: Text(
-                      'Skin',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(color: Colors.black54, fontSize: 20),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      widthFactor: 7.2,
+                      child: Text(
+                        'Skin',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(color: Colors.black54, fontSize: 20),
+                      ),
                     ),
                     onPressed: () {},
                   ),
@@ -213,16 +240,20 @@ class _MyHomePageState extends State<MyHomePage> {
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [Colors.pink.shade100, Colors.teal.shade100, Colors.pink.shade100],
+                      colors: [Colors.pink.shade50, Colors.pink.shade50],
                     ),
                   ),
                   child: MaterialButton(
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     shape: StadiumBorder(),
-                    child: Text(
-                      'Hair',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(color: Colors.black54, fontSize: 20),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      widthFactor: 7.2,
+                      child: Text(
+                        'Hair',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(color: Colors.black54, fontSize: 20),
+                      ),
                     ),
                     onPressed: () {},
                   ),
@@ -241,16 +272,20 @@ class _MyHomePageState extends State<MyHomePage> {
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [Colors.pink.shade100, Colors.teal.shade100, Colors.pink.shade100],
+                      colors: [Colors.tealAccent, Colors.pink.shade50],
                     ),
                   ),
                   child: MaterialButton(
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     shape: StadiumBorder(),
-                    child: Text(
-                      'Sexual health',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(color: Colors.black54, fontSize: 20),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      widthFactor: 2.2,
+                      child: Text(
+                        'Sexual health',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(color: Colors.black54, fontSize: 20),
+                      ),
                     ),
                     onPressed: () {},
                   ),
@@ -269,16 +304,20 @@ class _MyHomePageState extends State<MyHomePage> {
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [Colors.pink.shade100, Colors.teal.shade100, Colors.pink.shade100],
+                      colors: [Colors.tealAccent, Colors.pink.shade100, Colors.purple.shade50],
                     ),
                   ),
                   child: MaterialButton(
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     shape: StadiumBorder(),
-                    child: Text(
-                      'Healthy ageing',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(color: Colors.black54, fontSize: 20),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      widthFactor: 2.0,
+                      child: Text(
+                        'Healthy ageing',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(color: Colors.black54, fontSize: 20),
+                      ),
                     ),
                     onPressed: () {},
                   ),
@@ -297,7 +336,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [Colors.pink.shade100, Colors.teal.shade100, Colors.pink.shade100],
+                      colors: [Colors.blueGrey, Colors.white],
                     ),
                   ),
                   child: MaterialButton(
