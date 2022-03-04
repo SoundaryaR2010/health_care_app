@@ -46,84 +46,64 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                 // Image.asset('assets/images/boy.jpg',
+                 // width: 250,
+                 //   height: 250,
+                 //   color: Colors.teal.shade100,
+                 //   colorBlendMode: BlendMode.darken,
+                 // ),
+                // SizedBox(
+                //   height: 250,
+                // ),
+                Text(
+                  "Healthcare whenever \n"
+                  "you need it",
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  // Theme.of(context).textTheme.headline4,
 
-               // Image.asset('assets/images/boy.jpg',
-               // width: 250,
-               //   height: 250,
-               //   color: Colors.teal.shade100,
-               //   colorBlendMode: BlendMode.darken,
-               // ),
-              // SizedBox(
-              //   height: 250,
-              // ),
-              Text(
-                "Healthcare whenever \n"
-                "you need it",
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
+                  textAlign: TextAlign.center,
                 ),
-                // Theme.of(context).textTheme.headline4,
-
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              // Text(
-              //   "We value your privacy & safety. \n"
-              //   "Read our Privacy Policy",
-              //   textAlign: TextAlign.center,
-              // ),
-              Center(
-                child: Text.rich(
-                  TextSpan(
-                    text: 'We value your privacy & safety.\n '
-                                'Read our ',
-                    style: TextStyle(),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'Privacy Policy',
-                          style: TextStyle(
-                            color: Colors.blue.shade900,
-                            decoration: TextDecoration.underline,
-                          )),
-                    ],
+                SizedBox(
+                  height: 25,
+                ),
+                // Text(
+                //   "We value your privacy & safety. \n"
+                //   "Read our Privacy Policy",
+                //   textAlign: TextAlign.center,
+                // ),
+                Center(
+                  child: Text.rich(
+                    TextSpan(
+                      text: 'We value your privacy & safety.\n '
+                                  'Read our ',
+                      style: TextStyle(),
+                      children: <TextSpan>[
+                        TextSpan(
+                            text: 'Privacy Policy',
+                            style: TextStyle(
+                              color: Colors.blue.shade900,
+                              decoration: TextDecoration.underline,
+                            )),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              SizedBox(
-                height: 50,
-                width: 270,
-              child: OutlinedButton(
-                child: Text(
-                  "sign up",
-                  style: TextStyle(fontSize: 20.0,
-                    color: Colors.black54,
-                  ),
+                SizedBox(
+                  height: 30,
                 ),
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: Colors.teal.shade100,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                ),
-                onPressed:() {},
-              )
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              SizedBox(
-                height: 50,
-                width: 270,
+                SizedBox(
+                  height: 50,
+                  width: 270,
                 child: OutlinedButton(
                   child: Text(
-                    "Have an account? login",
+                    "sign up",
                     style: TextStyle(fontSize: 20.0,
                       color: Colors.black54,
                     ),
@@ -134,8 +114,29 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   onPressed:() {},
                 )
-              ),
-            ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 270,
+                  child: OutlinedButton(
+                    child: Text(
+                      "Have an account? login",
+                      style: TextStyle(fontSize: 20.0,
+                        color: Colors.black54,
+                      ),
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      backgroundColor: Colors.teal.shade100,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                    ),
+                    onPressed:() {},
+                  )
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -46,189 +46,191 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              // SizedBox(
-              //   height: 30,
-              // ),
-              Align(
-                alignment: Alignment.topCenter,
-                child: Text(
-                  "Create new Account",
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(
-                    fontStyle: FontStyle.normal,
-                    fontSize: 33,
-                    color: Colors.black,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                // SizedBox(
+                //   height: 30,
+                // ),
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Text(
+                    "Create new Account",
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                      fontStyle: FontStyle.normal,
+                      fontSize: 33,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "Already Registered? Login",
-                style: TextStyle(
-                  fontSize: 17,
-                  color: Colors.black54,
+                SizedBox(
+                  height: 10,
                 ),
-              ),
-              SizedBox(
-                height:35,
-              ),
-              Align(
-                alignment: Alignment(-0.6,0.6),
-                child: Text(
-                  "PLEASE ENTER YOUR NAME",
-                  textAlign: TextAlign.start,
+                Text(
+                  "Already Registered? Login",
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 17,
                     color: Colors.black54,
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              SizedBox(
-                width: 310,
-                height: 40,
-                child: TextField(
-                  decoration: new InputDecoration(
-                    border: new OutlineInputBorder(
-                      borderRadius: const BorderRadius.all(
-                        const Radius.circular(30.0),
+                SizedBox(
+                  height:35,
+                ),
+                Align(
+                  alignment: Alignment(-0.6,0.6),
+                  child: Text(
+                    "PLEASE ENTER YOUR NAME",
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black54,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                SizedBox(
+                  width: 310,
+                  height: 40,
+                  child: TextField(
+                    decoration: new InputDecoration(
+                      border: new OutlineInputBorder(
+                        borderRadius: const BorderRadius.all(
+                          const Radius.circular(30.0),
+                        ),
+                        borderSide: BorderSide(color: Colors.white),
                       ),
-                      borderSide: BorderSide(color: Colors.white),
+                      filled: true,
+                      fillColor: Colors.white,
                     ),
-                    filled: true,
-                    fillColor: Colors.white,
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Align(
-                alignment: Alignment(-0.6,0.6),
-                child: Text(
-                  "PLEASE ENTER YOUR MAIL",
-                  textAlign: TextAlign.start,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.black54,
+                SizedBox(
+                  height: 20,
+                ),
+                Align(
+                  alignment: Alignment(-0.6,0.6),
+                  child: Text(
+                    "PLEASE ENTER YOUR MAIL",
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black54,
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              SizedBox(
-                width: 310,
-                height: 40,
-                child: TextField(
-                  decoration: new InputDecoration(
-                    border: new OutlineInputBorder(
-                      borderRadius: const BorderRadius.all(
-                        const Radius.circular(30.0),
+                SizedBox(
+                  height: 5,
+                ),
+                SizedBox(
+                  width: 310,
+                  height: 40,
+                  child: TextField(
+                    decoration: new InputDecoration(
+                      border: new OutlineInputBorder(
+                        borderRadius: const BorderRadius.all(
+                          const Radius.circular(30.0),
+                        ),
+                        borderSide: BorderSide(color: Colors.white),
                       ),
-                      borderSide: BorderSide(color: Colors.white),
+                      filled: true,
+                      fillColor: Colors.white,
                     ),
-                    filled: true,
-                    fillColor: Colors.white,
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Align(
-                alignment: Alignment(-0.5,0.5),
-                child: Text(
-                  "PLEASE ENTER YOUR PASSWORD",
-                  textAlign: TextAlign.start,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.black54,
+                SizedBox(
+                  height: 20,
+                ),
+                Align(
+                  alignment: Alignment(-0.5,0.5),
+                  child: Text(
+                    "PLEASE ENTER YOUR PASSWORD",
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black54,
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              SizedBox(
-                width: 310,
-                height: 40,
-                child: TextField(
-                  obscureText: true,
-                  decoration: new InputDecoration(
-                    border: new OutlineInputBorder(
-                      borderRadius: const BorderRadius.all(
-                        const Radius.circular(30.0),
+                SizedBox(
+                  height: 5,
+                ),
+                SizedBox(
+                  width: 310,
+                  height: 40,
+                  child: TextField(
+                    obscureText: true,
+                    decoration: new InputDecoration(
+                      border: new OutlineInputBorder(
+                        borderRadius: const BorderRadius.all(
+                          const Radius.circular(30.0),
+                        ),
+                        borderSide: BorderSide(color: Colors.white),
                       ),
-                      borderSide: BorderSide(color: Colors.white),
+                      filled: true,
+                      fillColor: Colors.white,
                     ),
-                    filled: true,
-                    fillColor: Colors.white,
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Align(
-                alignment: Alignment(-0.5,0.4),
-                child: Text(
-                  "PLEASE ENTER YOUR DATE OF BIRTH",
-                  textAlign: TextAlign.start,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.black54,
+                SizedBox(
+                  height: 20,
+                ),
+                Align(
+                  alignment: Alignment(-0.5,0.4),
+                  child: Text(
+                    "PLEASE ENTER YOUR DATE OF BIRTH",
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black54,
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              SizedBox(
-                width: 310,
-                height: 40,
-                child: TextField(
-                  obscureText: true,
-                  decoration: new InputDecoration(
-                    border: new OutlineInputBorder(
-                      borderRadius: const BorderRadius.all(
-                        const Radius.circular(30.0),
+                SizedBox(
+                  height: 5,
+                ),
+                SizedBox(
+                  width: 310,
+                  height: 40,
+                  child: TextField(
+                    obscureText: true,
+                    decoration: new InputDecoration(
+                      border: new OutlineInputBorder(
+                        borderRadius: const BorderRadius.all(
+                          const Radius.circular(30.0),
+                        ),
+                        borderSide: BorderSide(color: Colors.white),
                       ),
-                      borderSide: BorderSide(color: Colors.white),
+                      filled: true,
+                      fillColor: Colors.white,
                     ),
-                    filled: true,
-                    fillColor: Colors.white,
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              SizedBox(
-                  height: 60,
-                  width: 260,
-                  child: OutlinedButton(
-                    child: Text(
-                      "sign up",
-                      style: TextStyle(fontSize: 20.0,
-                        color: Colors.black54,
+                SizedBox(
+                  height: 20,
+                ),
+                SizedBox(
+                    height: 60,
+                    width: 260,
+                    child: OutlinedButton(
+                      child: Text(
+                        "sign up",
+                        style: TextStyle(fontSize: 20.0,
+                          color: Colors.black54,
+                        ),
                       ),
-                    ),
-                    style: OutlinedButton.styleFrom(
-                      backgroundColor: Colors.teal.shade50,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                    ),
-                    onPressed:() {},
-                  )
-              ),
-            ],
+                      style: OutlinedButton.styleFrom(
+                        backgroundColor: Colors.teal.shade50,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                      ),
+                      onPressed:() {},
+                    )
+                ),
+              ],
+            ),
           ),
         ),
       ),
