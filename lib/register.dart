@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'SIGN UP PAGE'),
+      home: const MyHomePage(title: 'REGISTER PAGE'),
     );
   }
 }
