@@ -33,6 +33,11 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+void my_account(my_account){
+  
+
+}
+
 class _MyHomePageState extends State<MyHomePage> {
 
   @override
@@ -48,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Center(
           child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -159,111 +164,158 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        height: 90,
-                        width: 100,
-                        child: RawMaterialButton(
-                          fillColor: Colors.deepPurpleAccent.shade100,
-                          // splashColor: Colors.purple,
-                          onPressed: () {},
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          height: 80,
+                          width: 118,
                           child: Padding(
-                            padding: EdgeInsets.all(5.0),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: const [
-                                Icon(
-                                  Icons.all_out,
-                                  color: Colors.black,
-                                  size: 32,
+                            padding: const EdgeInsets.only(
+                                left: 0.0, top: 0.0, right: 2.0, bottom: 0.0),
+                            child: RawMaterialButton(
+                              fillColor: Colors.teal.shade100,
+                              // splashColor: Colors.purple,
+                              onPressed: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return AlertDialog(
+                                      title: Text('Country List'),
+                                      content: new ListView(
+                                        children: <Widget>[
+                                          new Column(
+                                            children: <Widget>[
+                                              new DropdownButton<String>(
+                                                items: <String>[
+                                                  'A',
+                                                  'B',
+                                                  'C',
+                                                  'D',
+                                                  'E',
+                                                  'F',
+                                                  'G'
+                                                ].map((String value) {
+                                                  return new DropdownMenuItem<
+                                                      String>(
+                                                    value: value,
+                                                    child: new Text(value),
+                                                  );
+                                                }).toList(),
+                                                onChanged: (_) {},
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  },
+                                );
+                              },
+                              child: Padding(
+                                padding: EdgeInsets.all(3.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: const [
+                                    Icon(
+                                      Icons.calendar_today_outlined,
+                                      color: Colors.black54,
+                                      size: 28,
+                                    ),
+                                    // SizedBox(
+                                    //   width: 10.0,
+                                    // ),
+                                    Text(
+                                      "Appointments",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 14),
+                                    ),
+                                  ],
                                 ),
-                                // SizedBox(
-                                //   width: 10.0,
-                                // ),
-                                Text(
-                                  "Order"
-                                      "\nMedicines",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 14),
-                                ),
-                              ],
+                              ),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5.0)),
                             ),
                           ),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
                         ),
-                      ),
-                      SizedBox(
-                        height: 90,
-                        width: 100,
-                        child: RawMaterialButton(
-                          fillColor: Colors.deepPurpleAccent.shade100,
-                          // splashColor: Colors.purple,
-                          onPressed: () {},
+                        SizedBox(
+                          height: 80,
+                          width: 118,
                           child: Padding(
-                            padding: EdgeInsets.all(5.0),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: const [
-                                Icon(
-                                  Icons.all_out,
-                                  color: Colors.black,
-                                  size: 32,
+                            padding: const EdgeInsets.only(
+                                left: 10.0, top: 0.0, right: 2.0, bottom: 0.0),
+                            child: RawMaterialButton(
+                              fillColor: Colors.teal.shade100,
+                              // splashColor: Colors.purple,
+                              onPressed: () {},
+                              child: Padding(
+                                padding: EdgeInsets.all(3.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: const [
+                                    Icon(
+                                      Icons.bluetooth,
+                                      color: Colors.black54,
+                                      size: 28,
+                                    ),
+                                    // SizedBox(
+                                    //   width: 10.0,
+                                    // ),
+                                    Text(
+                                     "My devices",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 14),
+                                    ),
+                                  ],
                                 ),
-                                // SizedBox(
-                                //   width: 10.0,
-                                // ),
-                                Text(
-                                  "Order"
-                                      "\nMedicines",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 14),
-                                ),
-                              ],
+                              ),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5.0)),
                             ),
                           ),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
                         ),
-                      ),
-                      SizedBox(
-                        height: 90,
-                        width: 100,
-                        child: RawMaterialButton(
-                          fillColor: Colors.deepPurpleAccent.shade100,
-                          // splashColor: Colors.purple,
-                          onPressed: () {},
+                        SizedBox(
+                          height: 80,
+                          width: 118,
                           child: Padding(
-                            padding: EdgeInsets.all(5.0),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: const [
-                                Icon(
-                                  Icons.all_out,
-                                  color: Colors.black,
-                                  size: 32,
+                            padding: const EdgeInsets.only(
+                                left: 10.0, top: 0.0, right: 0.0, bottom: 0.0),
+                            child: RawMaterialButton(
+                              fillColor: Colors.teal.shade100,
+                              // splashColor: Colors.purple,
+                              onPressed: () {},
+                              child: Padding(
+                                padding: EdgeInsets.all(3.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: const [
+                                    Icon(
+                                      Icons.settings,
+                                      color: Colors.black54,
+                                      size: 28,
+                                    ),
+                                    // SizedBox(
+                                    //   width: 10.0,
+                                    // ),
+                                    Text(
+                                      "My account",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 14),
+                                    ),
+                                  ],
                                 ),
-                                // SizedBox(
-                                //   width: 10.0,
-                                // ),
-                                Text(
-                                  "Order"
-                                      "\nMedicines",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 14),
-                                ),
-                              ],
+                              ),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5.0)),
                             ),
                           ),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),
