@@ -33,12 +33,9 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-void my_account(my_account){
-  
-
-}
-
 class _MyHomePageState extends State<MyHomePage> {
+  var items = ["Addresses","Favorites","Offers","Settings"];
+  String myaccount_value = "My Account";
 
   @override
   Widget build(BuildContext context) {
@@ -177,42 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: RawMaterialButton(
                               fillColor: Colors.teal.shade100,
                               // splashColor: Colors.purple,
-                              onPressed: () {
-                                showDialog(
-                                  context: context,
-                                  builder: (BuildContext context) {
-                                    return AlertDialog(
-                                      title: Text('Country List'),
-                                      content: new ListView(
-                                        children: <Widget>[
-                                          new Column(
-                                            children: <Widget>[
-                                              new DropdownButton<String>(
-                                                items: <String>[
-                                                  'A',
-                                                  'B',
-                                                  'C',
-                                                  'D',
-                                                  'E',
-                                                  'F',
-                                                  'G'
-                                                ].map((String value) {
-                                                  return new DropdownMenuItem<
-                                                      String>(
-                                                    value: value,
-                                                    child: new Text(value),
-                                                  );
-                                                }).toList(),
-                                                onChanged: (_) {},
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    );
-                                  },
-                                );
-                              },
+                              onPressed: () {},
                               child: Padding(
                                 padding: EdgeInsets.all(3.0),
                                 child: Column(
@@ -315,6 +277,98 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                       ],
+                    ),
+                  ),
+                  // DropdownButton(
+                  //   value: myaccount_value,
+                  //   icon: Icon(Icons.keyboard_arrow_down),
+                  //   items:items.map((String items) {
+                  //     return DropdownMenuItem(
+                  //         value: items,
+                  //         child: Text(items)
+                  //     );
+                  //   }
+                  //   ).toList(),
+                  //   onChanged: (String? newValue){
+                  //     setState(() {
+                  //       myaccount_value = newValue!;
+                  //     });
+                  //   },
+                  // ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: DropdownButton<String>(
+                      hint: Text('My Account',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      ),
+                      icon: Icon(Icons.keyboard_arrow_down),
+                      items: <String>["Addresses","Favorites","Offers","Settings"].map((String value){
+                        return DropdownMenuItem<String>(
+                          value: "My Account",
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      onChanged: (_) {},
+                    ),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: DropdownButton<String>(
+                      hint: Text('Payments & Refunds',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      icon: Icon(Icons.keyboard_arrow_down),
+                      items: <String>["Payment Status","Refund Modes"].map((String value){
+                        return DropdownMenuItem<String>(
+                          value: "My Account",
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      onChanged: (_) {},
+                    ),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: DropdownButton<String>(
+                      hint: Text('My Wallet',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      icon: Icon(Icons.keyboard_arrow_down),
+                      items: <String>["Refund Status","Payment Modes"].map((String value){
+                        return DropdownMenuItem<String>(
+                          value: "My Account",
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      onChanged: (_) {},
+                    ),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: DropdownButton<String>(
+                      hint: Text('Help',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      icon: Icon(Icons.keyboard_arrow_down),
+                      items: <String>[""].map((String value){
+                        return DropdownMenuItem<String>(
+                          value: "My Account",
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      onChanged: (_) {},
                     ),
                   ),
                 ],
