@@ -299,10 +299,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     width: MediaQuery.of(context).size.width,
                     child: DropdownButton<String>(
                       hint: Text('My Account',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       icon: Icon(Icons.keyboard_arrow_down),
                       items: <String>["Addresses","Favorites","Offers","Settings"].map((String value){
@@ -369,6 +369,46 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       }).toList(),
                       onChanged: (_) {},
+                    ),
+                  ),
+                  SizedBox(
+                    height: 70,
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: BottomAppBar(
+                        elevation: 5.0,
+                        // shape: shape,
+                        color: Colors.white,
+                        child: IconTheme(
+                          data: IconThemeData(
+                              color: Theme.of(context).colorScheme.onPrimary),
+                          child: Row(
+                            children: <Widget>[
+                              IconButton(
+                                tooltip: 'Open navigation menu',
+                                icon: const Icon(Icons.home),
+                                onPressed: () {},
+                              ),
+                              // if (centerLocations.contains(fabLocation)) const Spacer(),
+                              IconButton(
+                                tooltip: 'Search',
+                                icon: const Icon(Icons.store_outlined),
+                                onPressed: () {},
+                              ),
+                              IconButton(
+                                tooltip: 'Favorite',
+                                icon: const Icon(Icons.local_grocery_store_outlined),
+                                onPressed: () {},
+                              ),
+                              IconButton(
+                                tooltip: 'Favorite',
+                                icon: const Icon(Icons.perm_identity_outlined),
+                                onPressed: () {},
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ],
