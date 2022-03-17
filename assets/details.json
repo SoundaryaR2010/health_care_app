@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": "Dr.1",
+      "name": "Dr. John",
+      "description": "Senior Cardiologist"
+    },
+    {
+      "id": "Dr.2",
+      "name": "Dr. Alice",
+      "description": "Urologist"
+    },
+    {
+      "id": "Dr.3",
+      "name": "Dr. Kej",
+      "description": "General physician"
+    }
+  ]
+}

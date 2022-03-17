@@ -1,6 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:medical_app/login.dart';
+import 'package:medical_app/register.dart';
 
 void main() {
   runApp(const MyApp());
@@ -112,7 +114,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     backgroundColor: Colors.teal.shade100,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                   ),
-                  onPressed:() {},
+                  onPressed:() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => register()
+                      ),
+                    );
+                  },
                 )
                 ),
                 SizedBox(
@@ -132,7 +140,13 @@ class _MyHomePageState extends State<MyHomePage> {
                       backgroundColor: Colors.teal.shade100,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                     ),
-                    onPressed:() {},
+                    onPressed:() {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => login()
+                        ),
+                      );
+                    },
                   )
                 ),
               ],
