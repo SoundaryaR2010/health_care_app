@@ -37,6 +37,7 @@ dependencies:
   bubble: ^1.2.1
   flutter_intl: ^0.0.1
   http: ^0.13.4
+  table_calendar: ^3.0.2
 
 dev_dependencies:
   flutter_test:
