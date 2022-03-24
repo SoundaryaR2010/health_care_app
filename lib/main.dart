@@ -46,7 +46,11 @@ class _MyHomePageState extends State<MyHomePage> {
             radius: 0.8,
             colors: [Colors.teal.shade200,Colors.white],
           ),
-        ),
+          image: DecorationImage(
+              image: AssetImage('assets/images/bboy.png'),
+            alignment: Alignment(0,-0.7),
+            ),
+          ),
         child: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -61,6 +65,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 // SizedBox(
                 //   height: 250,
                 // ),
+                SizedBox(
+                  height: 50,
+                ),
                 Text(
                   "Healthcare whenever \n"
                   "you need it",

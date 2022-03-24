@@ -33,6 +33,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  TextEditingController emailController = new TextEditingController();
+  TextEditingController passwordController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +97,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   SizedBox(
                     width: 310,
                     height: 40,
-                    child: TextField(
+                    child: TextFormField(
+                      controller: emailController,
                       decoration: new InputDecoration(
                         border: new OutlineInputBorder(
                           borderRadius: const BorderRadius.all(
@@ -128,7 +131,8 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 width: 310,
                 height: 40,
-                child: TextField(
+                child: TextFormField(
+                  controller: passwordController,
                   obscureText: true,
                   decoration: new InputDecoration(
                     border: new OutlineInputBorder(
